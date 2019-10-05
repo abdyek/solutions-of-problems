@@ -20,20 +20,21 @@ public class main {
         arrangeEmployees(employees, numOfEmployees);
         
         System.out.println("Hangi veritabanına kaydetmek istersiniz \n1-MySql"
-                + "\n2-MsSql \nOracle");
+                + "\n2-MsSql \n3-Oracle");
         int database = scanner.nextInt();
+        IPersonDal sql;
         switch(database){
             case 1: 
-                MySqlDal mySql = new MySqlDal();
-                mySql.add();
+                sql = new MySqlDal();
+                sql.add();
                 break;
             case 2:
-                MsSqlDal msSql = new MsSqlDal();
-                msSql.add();
+                sql = new MsSqlDal();
+                sql.add();
                 break;
             case 3:
-                OracleDal oracle = new OracleDal();
-                oracle.add();
+                sql = new OracleDal();
+                sql.add();
                 break;
             default:
                 System.out.println("Yanlış girdi!");
