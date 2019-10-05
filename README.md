@@ -1,1 +1,1 @@
-soru2'nin cevabı
+Sınav sorularının cevapları
